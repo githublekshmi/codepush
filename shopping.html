@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>shopping cart</h1>
+        <script>
+            var cart=[];
+            var Item=function(name,price,count){
+                this.name=name
+                this.price=price
+                this.count=count
+            };
+            function addItemToCart(name,price,count){
+                for(var i in cart){
+                    if(cart[i].name===name){
+                        cart[i].count +=count;
+                        return;
+                    }
+                }
+                var item=new Item(name,price,count)
+                cart.push(item);
+            }
+            addItemToCart("Apple",30,1);
+            addItemToCart("Orange",40,1);
+            addItemToCart("Banana",90,1);
+            console.log(cart);
+            console.log(cart[0].name);
+
+            
+            function listCart(){
+                var cartCopy=[];
+                for(var i in cart){
+                    var item=cart[i];
+                    var itemCopy={};
+                    for (var p in item){
+                        itemCopy[p]=item[p];
+                    }
+                    cartCopy.push(itemCopy);
+
+                }
+                return cartCopy;
+            }
+            function displayCart(){
+                var cartArray=listCart();
+                var output="";
+                for(var i in cartArray){
+                    output+=""+cartArray[i].name+""+.cartArray[i].count+""
+                }
+            }
+
+        </script>
+    </head>
+</html>

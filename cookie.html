@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <body>
+            <h1>Greeky Shows</h1>
+        
+                Name:<input type="text" name="name"><br><br>Email:<input type="email" name="email"><br><br>Language:<input type="text" name="lang"><br><br>
+            <input type="button" value="set Cookies" name="set" onclick="setCookies()">
+            <input type="button" value="get Cookies" name="get" onclick="getCookies()">
+            </form>
+            <script>
+                function setCookies(){
+                    document.cookie="name="+document.myform.name.value;
+                    document.cookie="email="+document.myform.email.value;
+                    document.cookie="langauage="+document.myform.lang.value;
+                }
+            </script>
+        </body>
+    </header>
+</html>

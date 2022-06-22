@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main{
+    position: right;
+    height: 10vh;
+    width: 100%;
+
+}
+.main header{
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)url('https://www.pexels.com/photo/gray-and-white-wallpaper-1103970/'));
+    background-size: cover;
+    background-position: center center;
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+
+}
+.main header .iconShopping{
+    cursor: pointer;
+    z-index: 1;
+}
+.main .itemsBox{
+    position: relative;
+    height: calc(100%-15vh);
+}
+.cartBox{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.8);
+    z-index:99999 ;
+    transition: 0.3s linear;
+    transform: scale(0);
+
+}
+.cartBox.active{
+    transform: scale(1);
+}
+.cartBox.cart{
+    position: relative;
+    height: 70%;
+    background: #ffff;
+}
